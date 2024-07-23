@@ -181,10 +181,10 @@ class App extends Component {
                     onButtonSubmit={this.onButtonSubmit}
                     boxes={boxes} 
                     imageUrl={imageUrl}
-                  /> : (
-                  route === 'register' ? <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange} /> : null
-                )
+                  /> : null
               )}/>
+              
+              <Route path="register" element={<Register loadUser={this.loadUser} onRouteChange={this.onRouteChange} />} />
               <Route path="forgot_password" element={<ForgotPassword/>}/>
               <Route path="reset_password" element={<ResetPassword/>}/>
               <Route path="*" element={<ErrorPage/>} />

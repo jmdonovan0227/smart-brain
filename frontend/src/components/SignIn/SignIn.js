@@ -81,7 +81,7 @@ class SignIn extends Component {
                             <Link to='forgot_password' style={{textDecoration: 'none'}}><p className="f5 link dim black db pointer">Forgot Password</p></Link>
                         </div>
                         <div className="lh-copy mt1 center">
-                            <p onClick={() => this.props.onRouteChange('register')} className="f5 link dim black db pointer">Register</p>
+                            <Link to="/register"><p onClick={() => this.props.onRouteChange('register')} className="f5 link dim black db pointer">Register</p></Link>
                         </div>
                     </div>
                     <div className='error-text'>
