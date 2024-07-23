@@ -1,0 +1,24 @@
+.adjust-modal-title {
+    padding-left: 25px;
+}
+
+.modal-background {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.modal-text-styling {
+    font-family:'Courier New', Courier, monospace;
+}
+
+.error-text {
+    padding-top: 15px;
+    height: 40px;
+    font-style: italic;
+    font-family:'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+    color: rgba(255, 0, 0, 0.6);
+}
