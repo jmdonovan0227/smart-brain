@@ -115,7 +115,7 @@ const Navigation = ({ onRouteChange, isSignedIn }) => {
             <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh', border: '2px solid black'}}>
                 <nav style={{display: 'flex', justifyContent: 'flex-end', width: '100%'}}>
                     <Link to='/' style={{textDecoration: 'none'}}><p onClick={() => onRouteChange('signin')} className='f3 link dim black underline pa3 pointer'>Sign In</p></Link>
-                    <Link to="/register"><p onClick={() => onRouteChange('register')} className='f3 link dim black underline pa3 pointer'>Register</p></Link>
+                    <Link to="/"><p onClick={() => onRouteChange('register')} className='f3 link dim black underline pa3 pointer'>Register</p></Link>
                 </nav>
                 <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%'}}>
                     <Outlet />
