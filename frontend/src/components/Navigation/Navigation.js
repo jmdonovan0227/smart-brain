@@ -33,7 +33,7 @@ const Navigation = ({ onRouteChange, isSignedIn }) => {
 
     const handleAccountDeletion = () => {
         // call deletion endpoint on backend
-        fetch('https://smart-brain-7iex.onrender.com/api/delete', {
+        fetch('https://smart-brain-backend-zha7.onrender.com/api/delete', {
             method: 'delete',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({

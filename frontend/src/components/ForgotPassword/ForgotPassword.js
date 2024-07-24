@@ -25,7 +25,7 @@ class ForgotPassword extends Component {
     setSuccessStatus = () => this.setState({successfulRequest: true});
 
     onSubmitSendPasswordResetRequest = () => {
-        fetch('https://smart-brain-7iex.onrender.com/api/forgot_password', {
+        fetch('https://smart-brain-backend-zha7.onrender.com/api/forgot_password', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({

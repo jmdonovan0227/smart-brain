@@ -17,7 +17,7 @@ export const forgotPassword = async (req, res, db, decrypt, nodemailer) => {
         const expiration = new Date(Date.now() + 3600000); // 1 hour
 
         await db('login').where('id', '=', user.id).update({reset_token: token, reset_expiration: expiration});
-        const resetUrl = `https://smart-brain-hz3j.onrender.com/reset_password?token=${token}`;
+        const resetUrl = `https://smart-brain-frontend-zp36.onrender.com?token=${token}`;
 
         const transporter = nodemailer.createTransport({
             service: process.env.EMAIL_PROVIDER,

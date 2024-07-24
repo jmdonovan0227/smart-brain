@@ -113,7 +113,7 @@ class App extends Component {
     this.setState({allCelebrities: {celebrityNamesArray: []}});
     this.setState({ boxes: {boxesArray: []}});
 
-    fetch('https://smart-brain-7iex.onrender.com/api/faceurl', {
+    fetch('https://smart-brain-backend-zha7.onrender.com/api/faceurl', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -129,7 +129,7 @@ class App extends Component {
           this.updateCelebritiesState(this.findCelebrities(result.celebrityFaceNames));
           // we at least have a valid image, so update count for user indicating they have put in a valid image
           // this should update the database and return the update count
-          fetch('https://smart-brain-7iex.onrender.com/api/image', {
+          fetch('https://smart-brain-backend-zha7.onrender.com/api/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -185,7 +185,7 @@ class App extends Component {
                   route === 'register' ? <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange} /> : null
                 )
               )}/>
-              
+
               <Route path="forgot_password" element={<ForgotPassword/>}/>
               <Route path="reset_password" element={<ResetPassword/>}/>
               <Route path="*" element={<ErrorPage/>} />

@@ -38,7 +38,7 @@ class SignIn extends Component {
     }
 
     onSubmitSignIn = () => {
-        fetch('https://smart-brain-7iex.onrender.com/api/signin', {
+        fetch('https://smart-brain-backend-zha7.onrender.com/api/signin', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({

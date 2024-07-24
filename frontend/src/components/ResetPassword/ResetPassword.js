@@ -46,7 +46,7 @@ const ResetPassword = () => {
                 setErrorText('Passwords must be at least 14 characters long and have at least 1 upper case letter, lower case letter, number, and special character');
                 setErrorState(true);
             } else {
-                fetch('https://smart-brain-7iex.onrender.com/api/reset_password', {
+                fetch('https://smart-brain-backend-zha7.onrender.com/api/reset_password', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
