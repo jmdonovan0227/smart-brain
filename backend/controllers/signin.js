@@ -8,6 +8,10 @@ export const handleSignIn = (req, res, db, bcrypt) => {
     db.select('email', 'hash').from('login')
     .where('email', '=', email)
     .then(data => {
+        if(data.length === 0) {
+            res.status(400).json('email does not exist');
+        }
+        
         const isValid = bcrypt.compareSync(password, data[0].hash);
         if(isValid) {
             // return so above db call knows what we got from this call
