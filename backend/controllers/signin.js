@@ -9,7 +9,7 @@ export const handleSignIn = (req, res, db, bcrypt) => {
     .where('email', '=', email)
     .then(data => {
         if(data.length === 0) {
-            res.status(400).json('email does not exist');
+            return res.status(400).json('email does not exist');
         }
         
         const isValid = bcrypt.compareSync(password, data[0].hash);
@@ -21,7 +21,7 @@ export const handleSignIn = (req, res, db, bcrypt) => {
             })
             .catch(err => res.status(400).json('Unable to get user'))
         } else {
-            res.status(400).json('Wrong credentials')
+             return res.status(400).json('Wrong credentials')
         }
     })
     .catch(err => res.status(400).json('Wrong credentials'));
