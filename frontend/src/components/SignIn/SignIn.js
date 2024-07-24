@@ -54,7 +54,7 @@ class SignIn extends Component {
             else {
                 this.setErrorStatus();
             }
-        });
+        }).catch(err => this.setErrorStatus());
     }
 
     render() {

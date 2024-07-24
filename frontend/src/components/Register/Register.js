@@ -109,6 +109,9 @@ class Register extends Component {
                     this.setErrorText('Invalid registration, please try again.');
                     this.setErrorStatus();
                 }
+            }).catch(err => {
+                this.setErrorText('Invalid registration, please try again.');
+                this.setErrorStatus();
             });
         }
     }
